@@ -1,0 +1,16 @@
+{
+	"APP_NAME": "Simple Mobile Webapp",
+	"APP_VERSION": "0.0.1",
+	"APP_AUTHOR": "Mulder3",
+
+	"STARTUP_TITLE": "Willkommen",
+
+	"ABOUT_TITLE": "Info über",
+	"ABOUT_THANKS": "Besonderer Dank:",
+
+	"IMPRINT_TITLE": "Impressum",
+
+	"CMD_ABOUT": "Info über",
+	"CMD_IMPRINT": "Impressum",
+	"CMD_WHAT_IS_NEW": "Was ist neu"
+}

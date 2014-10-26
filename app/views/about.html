@@ -1,0 +1,43 @@
+<div class="smw-page">
+	<header class="bar bar-nav">
+		<a href="#" class="icon icon-left-nav pull-left" ng-click="goBackward()"></a>
+		<h1 class="title">{{ 'ABOUT_TITLE' | translate }}</h1>
+	</header>
+	<div class="content">
+		<div class="smw-hero content-padded">
+			<i class="fa fa-heart"></i>
+			<h1>{{ 'APP_NAME' | translate }}</h1>
+		</div>
+		<div class="content-padded">
+			<p>Version: <strong>{{ 'APP_VERSION' | translate }}</strong></p>
+			<p>Copyright by <strong>{{ 'APP_AUTHOR' | translate }}</strong></p>
+			<h4>
+				{{ 'ABOUT_THANKS' | translate }}
+			</h4>
+		</div>
+		<ul class="table-view">
+			<li class="table-view-cell">
+				<a class="navigate-right" href="http://goratchet.com/" target="_blank">
+					<div class="media-body">
+						Ratchet
+						<p>
+							Version: 2.0.2<br>
+							Code licensed under the MIT License
+						</p>
+					</div>
+				</a>
+			</li>
+			<li class="table-view-cell">
+				<a class="navigate-right" href="https://angularjs.org/" target="_blank">
+					<div class="media-body">
+						AngularJS
+						<p>
+							Version: 1.3.0<br>
+							Code licensed under the MIT License
+						</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
