@@ -16,7 +16,7 @@ angular.module('smw')
 					smwHistory.backward();
 				}
 				else {
-					smwHistory.go('/');
+					smwHistory.go('#/');
 				}
 			}
 

@@ -5,7 +5,7 @@
 	"keywords": ["webapp", "mobile", "html5", "css"],
 	"homepage": "http://www.example.com/path/to/info.html",
 	"license": "MIT",
-	"description": "this is a template for a simple mobile web application.",
+	"description": "This is a simple mobile web application with Ratchet, Angular and Angular Translate.",
 	"dependencies": {
 	},
 	"devDependencies": {

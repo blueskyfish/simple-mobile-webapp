@@ -61,7 +61,7 @@ module.exports = function (grunt) {
 					middleware: function (connect) {
 						return [
 							connect.static('.tmp'),
-							connect().use('/components', connect.static('./components')),
+							connect().use('/bower_components', connect.static('./bower_components')),
 							connect.static(_options.app)
 						];
 					}
@@ -77,15 +77,15 @@ module.exports = function (grunt) {
 			dest: {
 				files: {
 					'dest/assets/css/vendor.min.css': [
-						'components/ratchet/2.0.2/css/ratchet.min.css',
-						'components/font-awesome/4.2.0/css/font-awesome.min.css'
+						'bower_components/ratchet/dist/css/ratchet.min.css',
+						'bower_components/components-font-awesome/css/font-awesome.min.css'
 					],
 					'dest/assets/js/vendor.min.js': [
-						'components/angular/1.3.0/angular.min.js',
-						'components/angular/1.3.0/angular-route.min.js',
-						'components/angular-translate/2.4.2/angular-translate.min.js',
-						'components/angular-translate/2.4.2/angular-translate-loader-static-files.min.js',
-						'components/ratchet/2.0.2/js/ratchet.min.js'
+						'bower_components/angular/angular.min.js',
+						'bower_components/angular-route/angular-route.min.js',
+						'bower_components/angular-translate/angular-translate.min.js',
+						'bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js',
+						'bower_components/ratchet/dist/js/ratchet.min.js'
 					],
 					'.tmp/assets/js/application.js': [
 						'app/assets/js/app.js',
@@ -120,13 +120,13 @@ module.exports = function (grunt) {
 				files: [
 					{
 						expand: true,
-						cwd: 'components/ratchet/2.0.2/fonts',
+						cwd: 'bower_components/ratchet/dist/fonts',
 						src: ['*.*'],
 						dest: '.tmp/assets/fonts'
 					},
 					{
 						expand: true,
-						cwd: 'components/font-awesome/4.2.0/fonts',
+						cwd: 'bower_components/components-font-awesome/fonts',
 						src: ['*.*'],
 						dest: '.tmp/assets/fonts'
 					}
@@ -137,13 +137,13 @@ module.exports = function (grunt) {
 				files: [
 					{
 						expand: true,
-						cwd: 'components/ratchet/2.0.2/fonts',
+						cwd: 'bower_components/ratchet/dist/fonts',
 						src: ['*.*'],
 						dest: 'dest/assets/fonts'
 					},
 					{
 						expand: true,
-						cwd: 'components/font-awesome/4.2.0/fonts',
+						cwd: 'bower_components/components-font-awesome/fonts',
 						src: ['*.*'],
 						dest: 'dest/assets/fonts'
 					},

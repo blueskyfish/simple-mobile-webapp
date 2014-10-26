@@ -1,0 +1,26 @@
+{
+	"name": "simple-mobile-webapp",
+	"version": "0.0.1",
+	"homepage": "https://github.com/mulder3/simple-mobile-webapp",
+	"description": "This is a simple mobile web application with Ratchet, Angular and Angular Translate.",
+	"keywords": [
+		"mobile",
+		"ratchet",
+		"angular",
+		"angular translate",
+		"web",
+		"application"
+	],
+	"authors": [
+		"Mulder3"
+	],
+	"license": "MIT",
+	"dependencies": {
+		"angular": "1.3.0",
+		"angular-route": "1.3.0",
+		"angular-translate": "2.4.2",
+		"angular-translate-loader-static-files": "2.4.2",
+		"components-font-awesome": "4.2.0",
+		"ratchet": "2.0.2"
+	}
+}
