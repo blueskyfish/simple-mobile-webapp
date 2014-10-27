@@ -5,7 +5,8 @@
 
 angular.module('smw')
 
-	.run(function () {
+	.run(['SMW_History', function (smwHistory) {
 
 		// TODO add here the general run tasks
-	});
+		smwHistory.initialize();
+	}]);

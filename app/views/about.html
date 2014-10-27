@@ -1,6 +1,6 @@
 <div class="smw-page">
 	<header class="bar bar-nav">
-		<a href="#" class="icon icon-left-nav pull-left" ng-click="goBackward()"></a>
+		<a class="icon icon-left-nav pull-left" ng-click="goBackward($event)"></a>
 		<h1 class="title">{{ 'ABOUT_TITLE' | translate }}</h1>
 	</header>
 	<div class="content">
@@ -37,6 +37,35 @@
 						</p>
 					</div>
 				</a>
+			</li>
+			<li class="table-view-cell">
+				<a class="navigate-right" href="http://angular-translate.github.io/" target="_blank">
+					<div class="media-body">
+						Angular Translate
+						<p>
+							Version: 2.4.2<br>
+							Code licensed under the MIT License
+						</p>
+					</div>
+				</a>
+			</li>
+			<li class="table-view-cell">
+				<a class="navigate-right" href="http://fortawesome.github.io/Font-Awesome/" target="_blank">
+					<div class="media-body">
+						Font Awesome
+						<p>
+							Version: 4.2.0<br>
+							Code licensed under the MIT License
+						</p>
+					</div>
+				</a>
+			</li>
+			<li class="table-view-divider">Menu</li>
+			<li class="table-view-cell">
+				<a class="navigate-right" ng-href="#/imprint">{{ 'CMD_IMPRINT' | translate }}</a>
+			</li>
+			<li class="table-view-cell">
+				<a class="navigate-right" href="#">{{ 'CMD_WHAT_IS_NEW' | translate }}</a>
 			</li>
 		</ul>
 	</div>

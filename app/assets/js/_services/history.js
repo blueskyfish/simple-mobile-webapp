@@ -12,7 +12,7 @@ angular.module('smw')
 
 			var _mHistories = [];
 
-
+			// register for the event "$routeChangeSuccess"
 			$rootScope.$on('$routeChangeSuccess', function (ev, __data) {
 				var _path = __data.$$route.originalPath,
 					_len = _mHistories.length,
@@ -26,8 +26,6 @@ angular.module('smw')
 					return;
 				}
 				_mHistories.push(_path);
-				console.log('path', _path);
-				console.log('history:', _mHistories.join(', '))
 			});
 
 
@@ -46,16 +44,24 @@ angular.module('smw')
 			// Public API
 			return {
 
+				initialize: function () {
+					// nothing to do
+				},
+
 				isAvailable: function () {
 					return _isAvailable();
 				},
 
 				backward: function () {
-
+					_backward();
 				},
 
 				go: function (__path) {
 					$location.path(__path);
+				},
+
+				goHome: function () {
+					$location.path('/');
 				}
 			}
 		}

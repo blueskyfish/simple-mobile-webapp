@@ -10,13 +10,16 @@ angular.module('smw')
 		function ($scope, smwHistory) {
 
 
-			$scope.goBackward = function () {
+			$scope.goBackward = function ($event) {
+				$event.stopPropagation();
+
 				if (smwHistory.isAvailable()) {
 					smwHistory.backward();
 				}
 				else {
-					smwHistory.go('#/');
+					smwHistory.goHome();
 				}
+				return false;
 			}
 
 		}
