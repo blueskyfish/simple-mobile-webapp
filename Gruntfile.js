@@ -66,6 +66,17 @@ module.exports = function (grunt) {
 						];
 					}
 				}
+			},
+			dest: {
+				options: {
+					port: 9011,
+					base: 'dest',
+					keepalive: true,
+					open: {
+						target: 'http://localhost:9001/',
+						appName: 'openDest'
+					}
+				}
 			}
 		}, // connect
 
