@@ -212,7 +212,10 @@ module.exports = function (grunt) {
 			}
 		}, // uglify
 
-		clean: ['.tmp', 'dest'],
+		clean: {
+			server: ['.tmp'],
+			dest: ['dest']
+		},
 
 		// less compile the less files into one css (here is "application.css"
 		less: {
@@ -249,7 +252,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-processhtml');
 
 	grunt.registerTask('serve', [
-		'clean',
+		'clean:server',
 		'concat:server',
 		'less:server',
 		'copy:server',
@@ -259,7 +262,7 @@ module.exports = function (grunt) {
 	]);
 
 	grunt.registerTask('dest', [
-		'clean',
+		'clean:dest',
 		'less:dest',
 		'concat:dest',
 		'uglify:dest',
