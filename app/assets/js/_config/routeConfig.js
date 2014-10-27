@@ -10,6 +10,10 @@ angular.module('smw')
 			.when('/', {
 				templateUrl: 'views/startup.html'
 			})
+			.when('/login', {
+				templateUrl: 'views/login.html',
+				controller: 'SMW_LoginController'
+			})
 			.when('/about', {
 				templateUrl: 'views/about.html',
 				controller: 'SMW_AboutController'

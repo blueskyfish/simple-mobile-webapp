@@ -1,0 +1,29 @@
+<div class="smw-page">
+	<header class="bar bar-nav">
+		<a class="icon icon-left-nav pull-left" ng-click="goBackward($event)"></a>
+		<h1 class="title">{{ 'LOGIN_TITLE' | translate }}</h1>
+	</header>
+	<div class="content">
+		<div class="smw-hero smw-small content-padded">
+			<i class="fa fa-heart"></i>
+			<h1>{{ 'APP_NAME' | translate }}</h1>
+		</div>
+		<p class="content-padded">
+			{{ message }}
+		</p>
+		<form class="input-group" name="loginForm">
+			<div class="input-row">
+				<label>{{ 'LABEL_EMAIL' | translate }}</label>
+				<input type="email" placeholder="{{ 'PLACEHOLDER_EMAIL' | translate }}" ng-model="user.email">
+			</div>
+			<div class="input-row">
+				<label>{{ 'LABEL_PASSWORD' | translate }}</label>
+				<input type="password" placeholder="{{ 'PLACEHOLDER_PASSWORD' | translate }}" ng-model="user.password">
+			</div>
+
+		</form>
+		<div class="content-padded">
+			<button class="btn btn-positive btn-block" ng-click="loginUser()">{{ 'CMD_LOGIN' | translate }}</button>
+		</div>
+	</div>
+</div>

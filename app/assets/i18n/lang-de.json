@@ -5,12 +5,24 @@
 
 	"STARTUP_TITLE": "Willkommen",
 
+	"LOGIN_TITLE": "Anmelden",
+
 	"ABOUT_TITLE": "Info über",
 	"ABOUT_THANKS": "Besonderer Dank:",
 
 	"IMPRINT_TITLE": "Impressum",
 
+	"CMD_LOGIN": "Anmelden",
 	"CMD_ABOUT": "Info über",
 	"CMD_IMPRINT": "Impressum",
-	"CMD_WHAT_IS_NEW": "Was ist neu"
+	"CMD_WHAT_IS_NEW": "Was ist neu",
+
+	"LABEL_EMAIL": "E-Mail",
+	"LABEL_PASSWORD": "Passwort",
+	"PLACEHOLDER_EMAIL": "E-Mail Adresse",
+	"PLACEHOLDER_PASSWORD": "Passwort",
+
+
+	"MSG_LOGIN_START": "Bitte mit ihrer E-Mail Adresse und Passwort anmelden.",
+	"MSG_LOGIN_SUCCESS": "Hallo {{username}}, willkommen bei Simple Mobile Webapp"
 }
