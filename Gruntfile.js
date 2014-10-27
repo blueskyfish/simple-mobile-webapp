@@ -77,8 +77,8 @@ module.exports = function (grunt) {
 			dest: {
 				files: {
 					'dest/assets/css/vendor.min.css': [
-						'bower_components/ratchet/dist/css/ratchet.min.css',
-						'bower_components/components-font-awesome/css/font-awesome.min.css'
+						'bower_components/components-font-awesome/css/font-awesome.min.css',
+						'bower_components/ratchet/dist/css/ratchet.min.css'
 					],
 					'dest/assets/js/vendor.min.js': [
 						'bower_components/angular/angular.min.js',
