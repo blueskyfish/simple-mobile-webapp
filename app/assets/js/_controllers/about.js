@@ -6,21 +6,9 @@
 angular.module('smw')
 
 	.controller('SMW_AboutController', [
-		'$scope', 'SMW_History',
-		function ($scope, smwHistory) {
+		'$scope',
+		function ($scope) {
 
-
-			$scope.goBackward = function ($event) {
-				$event.stopPropagation();
-
-				if (smwHistory.isAvailable()) {
-					smwHistory.backward();
-				}
-				else {
-					smwHistory.goHome();
-				}
-				return false;
-			}
 
 		}
 	]);

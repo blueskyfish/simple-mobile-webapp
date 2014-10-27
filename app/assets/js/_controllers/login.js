@@ -5,8 +5,8 @@
 angular.module('smw')
 
 	.controller('SMW_LoginController', [
-		'$scope', '$translate', 'SMW_History',
-		function ($scope, $translate, smwHistory) {
+		'$scope', '$translate',
+		function ($scope, $translate) {
 
 			$scope.user = {
 
@@ -21,17 +21,6 @@ angular.module('smw')
 				$scope.message = __msg;
 			});
 
-			$scope.goBackward = function ($event) {
-				$event.stopPropagation();
-
-				if (smwHistory.isAvailable()) {
-					smwHistory.backward();
-				}
-				else {
-					smwHistory.goHome();
-				}
-				return false;
-			};
 
 			$scope.checkAGB = function (){
 				$scope.user.agb = !$scope.user.agb;
