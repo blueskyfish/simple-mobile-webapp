@@ -14,6 +14,10 @@ angular.module('smw')
 				templateUrl: 'views/login.html',
 				controller: 'SMW_LoginController'
 			})
+			.when('/agb', {
+				templateUrl: 'views/agb.html',
+				controller: 'SMW_AgbController'
+			})
 			.when('/about', {
 				templateUrl: 'views/about.html',
 				controller: 'SMW_AboutController'

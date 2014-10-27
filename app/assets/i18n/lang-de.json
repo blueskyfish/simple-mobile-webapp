@@ -12,6 +12,8 @@
 
 	"IMPRINT_TITLE": "Impressum",
 
+	"AGB_TITLE": "AGB",
+
 	"CMD_LOGIN": "Anmelden",
 	"CMD_ABOUT": "Info über",
 	"CMD_IMPRINT": "Impressum",
@@ -24,5 +26,6 @@
 
 
 	"MSG_LOGIN_START": "Bitte mit ihrer E-Mail Adresse und Passwort anmelden.",
-	"MSG_LOGIN_SUCCESS": "Hallo {{username}}, willkommen bei Simple Mobile Webapp"
+	"MSG_LOGIN_SUCCESS": "Hallo {{username}}, willkommen bei Simple Mobile Webapp",
+	"MSG_LOGIN_AGB": "Die AGB zustimmen"
 }

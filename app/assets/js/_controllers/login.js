@@ -11,7 +11,8 @@ angular.module('smw')
 			$scope.user = {
 
 				email: '',
-				password: ''
+				password: '',
+				agb: false
 			};
 
 			$scope.message = '';
@@ -30,6 +31,10 @@ angular.module('smw')
 					smwHistory.goHome();
 				}
 				return false;
+			};
+
+			$scope.checkAGB = function (){
+				$scope.user.agb = !$scope.user.agb;
 			};
 
 			$scope.loginUser = function () {
