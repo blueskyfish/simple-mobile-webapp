@@ -15,7 +15,7 @@ angular.module('smw')
 
 		function _isLoggedIn() {
 			if (_mUser !== null) {
-				return _mUser.userId !== 0;
+				return _mUser.userId >= 0;
 			}
 			return false;
 		}
