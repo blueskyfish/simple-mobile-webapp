@@ -52,9 +52,11 @@ angular.module('smw')
 				}
 			})
 			.when('/home', {
-				templateUrl: '',
+				templateUrl: 'views/home.html',
+				controller: 'SMW_HomeController',
 				access: {
-					needLogin: true
+					needLogin: true,
+					role: 'user'
 				}
 			})
 			.otherwise({
