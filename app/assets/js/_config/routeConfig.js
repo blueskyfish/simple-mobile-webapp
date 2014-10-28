@@ -8,7 +8,8 @@ angular.module('smw')
 
 		$routeProvider
 			.when('/', {
-				templateUrl: 'views/startup.html'
+				templateUrl: 'views/startup.html',
+				controller: 'SMW_StartupController'
 			})
 			.when('/login', {
 				templateUrl: 'views/login.html',
