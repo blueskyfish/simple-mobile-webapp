@@ -20,10 +20,6 @@
 				<label>{{ 'LABEL_PASSWORD' | translate }}</label>
 				<input type="password" placeholder="{{ 'PLACEHOLDER_PASSWORD' | translate }}" ng-model="user.password">
 			</div>
-			<div class="input-row smw-input-check">
-				<label><div class="toggle" ng-click="checkAGB()"><div class="toggle-handle"></div></div></label>
-				<p><a ng-href="#/agb">{{ 'MSG_LOGIN_AGB' | translate }}</a></p>
-			</div>
 		</form>
 		<div class="content-padded">
 			<button class="btn btn-positive btn-block" ng-click="loginUser()">{{ 'CMD_LOGIN' | translate }}</button>

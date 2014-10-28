@@ -12,22 +12,23 @@ angular.module('smw')
 
 			var _mHistories = [];
 
-			// register for the event "$routeChangeSuccess"
-			$rootScope.$on('$routeChangeSuccess', function (ev, __data) {
-				var _path = __data.$$route.originalPath,
-					_len = _mHistories.length,
+			function _addHistory(__path) {
+				var _len = _mHistories.length,
 					_lastPath;
-				if (_path === '') {
+
+				if (__path === '') {
 					return;
 				}
+
 				_lastPath = _len > 0 ? _mHistories[_len - 1] : null;
-				if (_path === _lastPath) {
+				if (__path === _lastPath) {
 					console.log('former path is already inside:', _lastPath);
 					return;
 				}
-				_mHistories.push(_path);
-			});
-
+				_mHistories.push(__path);
+				console.log('add path:', __path);
+				console.log('history: ', _mHistories);
+			}
 
 			function _isAvailable() {
 				return _mHistories.length >= 2;
@@ -37,15 +38,21 @@ angular.module('smw')
 				var _len = _mHistories.length,
 					_path = _mHistories[_len - 2];
 
+				console.log('backward before', _mHistories);
 				_mHistories.splice(_len - 2);
+				console.log('backward after', _mHistories);
 				$location.path(_path);
 			}
 
 			// Public API
 			return {
 
-				initialize: function () {
-					// nothing to do
+				/**
+				 *
+				 * @param {string} __path
+				 */
+				addHistory: function (__path) {
+					_addHistory(__path);
 				},
 
 				isAvailable: function () {

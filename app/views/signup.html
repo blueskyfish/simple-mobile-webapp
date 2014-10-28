@@ -1,0 +1,40 @@
+<div class="smw-page">
+	<header class="bar bar-nav">
+		<backward></backward>
+		<h1 class="title">{{ 'SIGNUP' | translate }}</h1>
+	</header>
+	<div class="content">
+		<div class="smw-hero smw-small content-padded">
+			<i class="fa fa-heart"></i>
+			<h1>{{ 'APP_NAME' | translate }}</h1>
+		</div>
+		<p class="content-padded">
+			{{ message }}
+		</p>
+		<form class="input-group" name="signupForm">
+			<div class="input-row">
+				<label>{{ 'LABEL_NAME' | translate }}</label>
+				<input type="text" placeholder="{{ 'PLACEHOLDER_NAME' | translate }}" ng-model="user.user">
+			</div>
+			<div class="input-row">
+				<label>{{ 'LABEL_EMAIL' | translate }}</label>
+				<input type="email" placeholder="{{ 'PLACEHOLDER_EMAIL' | translate }}" ng-model="user.email">
+			</div>
+			<div class="input-row">
+				<label>{{ 'LABEL_PASSWORD' | translate }}</label>
+				<input type="password" placeholder="{{ 'PLACEHOLDER_PASSWORD' | translate }}" ng-model="user.password">
+			</div>
+			<div class="input-row">
+				<label>{{ 'LABEL_REPEAT' | translate }}</label>
+				<input type="password" placeholder="{{ 'PLACEHOLDER_REPEAT' | translate }}" ng-model="user.repeat">
+			</div>
+			<div class="input-row smw-input-check">
+				<label><div class="toggle" ng-click="checkAGB()"><div class="toggle-handle"></div></div></label>
+				<p><a ng-href="#/agb">{{ 'MSG_SIGNUP_AGB' | translate }}</a></p>
+			</div>
+		</form>
+		<div class="content-padded">
+			<button class="btn btn-positive btn-block" ng-click="signupUser()">{{ 'CMD_SIGNUP' | translate }}</button>
+		</div>
+	</div>
+</div>

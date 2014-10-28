@@ -9,23 +9,53 @@ angular.module('smw')
 		$routeProvider
 			.when('/', {
 				templateUrl: 'views/startup.html',
-				controller: 'SMW_StartupController'
+				controller: 'SMW_StartupController',
+				access: {
+					needLogin: false
+				}
 			})
 			.when('/login', {
 				templateUrl: 'views/login.html',
-				controller: 'SMW_LoginController'
+				controller: 'SMW_LoginController',
+				access: {
+					needLogin: false
+				}
+			})
+			.when('/signup', {
+				templateUrl: 'views/signup.html',
+				controller: 'SMW_SignupController',
+				access: {
+					needLogin: false
+				}
 			})
 			.when('/agb', {
 				templateUrl: 'views/agb.html',
-				controller: 'SMW_AgbController'
+				controller: 'SMW_AgbController',
+				access: {
+					needLogin: false
+				}
+
 			})
 			.when('/about', {
 				templateUrl: 'views/about.html',
-				controller: 'SMW_AboutController'
+				controller: 'SMW_AboutController',
+				access: {
+					needLogin: false
+				}
+
 			})
 			.when('/imprint', {
 				templateUrl: 'views/imprint.html',
-				controller: 'SMW_ImprintController'
+				controller: 'SMW_ImprintController',
+				access: {
+					needLogin: false
+				}
+			})
+			.when('/home', {
+				templateUrl: '',
+				access: {
+					needLogin: true
+				}
 			})
 			.otherwise({
 				redirectTo: '/'
