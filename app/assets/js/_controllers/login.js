@@ -11,8 +11,7 @@ angular.module('smw')
 			$scope.user = {
 
 				email: '',
-				password: '',
-				agb: false
+				password: ''
 			};
 
 			$scope.message = '';
@@ -20,11 +19,6 @@ angular.module('smw')
 			$translate('MSG_LOGIN_START').then(function (__msg) {
 				$scope.message = __msg;
 			});
-
-
-			$scope.checkAGB = function (){
-				$scope.user.agb = !$scope.user.agb;
-			};
 
 			$scope.loginUser = function () {
 

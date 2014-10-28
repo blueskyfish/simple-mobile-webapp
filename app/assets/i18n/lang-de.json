@@ -7,6 +7,8 @@
 
 	"LOGIN_TITLE": "Anmelden",
 
+	"SIGNUP_TITLE": "Registrieren",
+
 	"ABOUT_TITLE": "Info über",
 	"ABOUT_THANKS": "Besonderer Dank:",
 
@@ -15,17 +17,23 @@
 	"AGB_TITLE": "AGB",
 
 	"CMD_LOGIN": "Anmelden",
+	"CMD_SIGNUP": "Registieren",
 	"CMD_ABOUT": "Info über",
 	"CMD_IMPRINT": "Impressum",
 	"CMD_WHAT_IS_NEW": "Was ist neu",
 
+	"LABEL_NAME": "Name",
 	"LABEL_EMAIL": "E-Mail",
 	"LABEL_PASSWORD": "Passwort",
+	"LABEL_REPEAT": "Wiederhol...",
+	"PLACEHOLDER_NAME": "Dein Name",
 	"PLACEHOLDER_EMAIL": "E-Mail Adresse",
 	"PLACEHOLDER_PASSWORD": "Passwort",
+	"PLACEHOLDER_REPEAT": "Wiederholung",
 
 
-	"MSG_LOGIN_START": "Bitte mit ihrer E-Mail Adresse und Passwort anmelden.",
+	"MSG_LOGIN_START": "Bitte mit Ihrer E-Mail Adresse und Passwort anmelden.",
 	"MSG_LOGIN_SUCCESS": "Hallo {{username}}, willkommen bei Simple Mobile Webapp",
-	"MSG_LOGIN_AGB": "Die AGB zustimmen"
+	"MSG_SIGNUP_START": "Bitte geben Sie Ihren Name, Ihre E-Mail Adresse und ein Passwort ein.",
+	"MSG_SIGNUP_AGB": "Die AGB zustimmen"
 }

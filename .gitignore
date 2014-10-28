@@ -4,3 +4,4 @@ node_modules
 .idea
 dest
 bower_components
+.bowerrc
