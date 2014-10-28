@@ -6,8 +6,8 @@
 angular.module('smw')
 
 	.directive('backward', [
-		'SMW_History',
-		function (smwHistory) {
+		'$window',
+		function ($window) {
 
 			return {
 				restrict: 'E',
@@ -18,12 +18,8 @@ angular.module('smw')
 					$scope.goBackward = function ($event) {
 						$event.stopPropagation();
 
-						if (smwHistory.isAvailable()) {
-							smwHistory.backward();
-						}
-						else {
-							smwHistory.goHome();
-						}
+						$window.history.back();
+
 						return false;
 					}
 

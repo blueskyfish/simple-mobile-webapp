@@ -5,8 +5,8 @@
 angular.module('smw')
 
 	.run([
-		'$rootScope', '$location', '$log', 'SMW_Authentication', 'SMW_History',
-		function ($rootScope, $location, $log, smwAuthentication, smwHistory) {
+		'$rootScope', '$location', '$log', 'SMW_Authentication',
+		function ($rootScope, $location, $log, smwAuthentication) {
 
 			'use strict';
 
@@ -20,15 +20,8 @@ angular.module('smw')
 						return;
 					}
 				}
+
 				console.log('route start: ', __data.$$route);
-			});
-
-			$rootScope.$on('$routeChangeSuccess', function (event, __data) {
-				smwHistory.addHistory(__data.$$route.originalPath);
-			});
-
-			$rootScope.$on('$routeChangeError', function (event, __data) {
-				$log.debug('[route] error by route ', __data.$$route);
 			});
 		}
 	]);
