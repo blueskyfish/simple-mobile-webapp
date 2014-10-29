@@ -9,6 +9,9 @@
 
 	"SIGNUP_TITLE": "Registrieren",
 
+	"HOME_TITLE": "Home",
+	"SIDEBAR_HOME": "Home Sidebar",
+
 	"ABOUT_TITLE": "Info über",
 	"ABOUT_THANKS": "Besonderer Dank:",
 
@@ -17,6 +20,7 @@
 	"AGB_TITLE": "AGB",
 
 	"CMD_LOGIN": "Anmelden",
+	"CMD_LOGOUT": "Abmelden",
 	"CMD_SIGNUP": "Registieren",
 	"CMD_ABOUT": "Info über",
 	"CMD_IMPRINT": "Impressum",
