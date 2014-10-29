@@ -23,7 +23,7 @@ angular.module('smw')
 
 				console.log('login:', $scope.user);
 
-				smwAuthentication.login('Sarah', 1000, $scope.user.email, ['user', 'admin']);
+				smwAuthentication.login(1000, ['user', 'admin']);
 
 				$location.path('/home');
 			};

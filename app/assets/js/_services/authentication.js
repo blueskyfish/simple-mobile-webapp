@@ -5,34 +5,39 @@
 angular.module('smw')
 
 /**
- *
+ * @ngdoc service
+ * @name SMW_Authentication
+ * @description
+ * Handles the roles of the current user. If there is no user, then it does not contains information.
  */
 .factory('SMW_Authentication', [
 
 	function () {
 
-		var _mUser = null;
+		// members
+
+		var _mUserId = -1,
+			_mUserRoles = null;
+
+		// internal implementation
 
 		function _isLoggedIn() {
-			if (_mUser !== null) {
-				return _mUser.userId >= 0;
-			}
-			return false;
+			return _mUserId > 0;
 		}
 
 		function _isAuthInRoles(__role) {
-			if (_mUser !== null) {
-				return _mUser.roles.indexOf(__role) >= 0;
+			if (_mUserRoles !== null) {
+				return _mUserRoles.indexOf(__role) >= 0;
 			}
 			return false;
 		}
 
-		// Public API
+		// public API
 		return {
 
 			/**
 			 * @ngdoc method
-			 * @name SMW_Authentication.method:isUserLoggedIn
+			 * @name SMW_Authentication.method:isLoggedIn
 			 * @description
 			 * Returns true, if the user is logged in, otherwise it returns false.
 			 *
@@ -43,6 +48,9 @@ angular.module('smw')
 			},
 
 			/**
+			 * @ngdoc method
+			 * @name SMW_Authentication.method:isAuthInRoles
+			 * @description
 			 * Checks whether the role is in the user roles.
 			 *
 			 * @param {string} __role the role
@@ -53,28 +61,28 @@ angular.module('smw')
 			},
 
 			/**
-			 * Set the login data.
+			 * @ngdoc method
+			 * @name SMW_Authentication.method:login
+			 * @description
+			 * Set the login information.
 			 *
-			 * @param {string} __name
 			 * @param {string} _userId
-			 * @param {string} __email
 			 * @param {Array|string} __roles
 			 */
-			login: function (__name, _userId, __email, __roles) {
-				_mUser = {
-					name: __name,
-					userId: _userId,
-					email: __email,
-					roles: angular.isArray(__roles) ? __roles : __roles.split(',')
-				};
+			login: function (_userId, __roles) {
+				_mUserId = _userId;
+				_mUserRoles = angular.isArray(__roles) ? __roles : __roles.split(',');
 			},
 
+			/**
+			 * @ngdoc method
+			 * @name SMW_Authentication.method:logout
+			 * @description
+			 * Reset the logged in user.
+			 */
 			logout: function () {
-				_mUser = null;
-			},
-
-			getUser: function () {
-				return angular.copy(_mUser);
+				_mUserId = -1;
+				_mUserRoles = null;
 			}
 		};
 	}
