@@ -11,13 +11,13 @@ angular.module('smw')
  * Handles the roles of the current user. If there is no user, then it does not contains information.
  */
 .factory('SMW_Authentication', [
-
-	function () {
+	'SMW_SessionStorage',
+	function (smwSessionStorage) {
 
 		// members
 
-		var _mUserId = -1,
-			_mUserRoles = null;
+		var _mUserId = smwSessionStorage.getValue('/authentication/userId', -1),
+			_mUserRoles = smwSessionStorage.getValue('/authentication/userRoles', null);
 
 		// internal implementation
 
@@ -26,10 +26,24 @@ angular.module('smw')
 		}
 
 		function _isAuthInRoles(__role) {
-			if (_mUserRoles !== null) {
+			if (_isLoggedIn() && _mUserRoles !== null) {
 				return _mUserRoles.indexOf(__role) >= 0;
 			}
 			return false;
+		}
+
+		function _login(__userId, __roles) {
+			_mUserId = __userId;
+			_mUserRoles = angular.isArray(__roles) ? __roles : __roles.split(',');
+			smwSessionStorage.setValue('/authentication/userId', _mUserId);
+			smwSessionStorage.setValue('/authentication/userRoles', _mUserRoles);
+		}
+
+		function _logout() {
+			_mUserId = -1;
+			_mUserRoles = null;
+			smwSessionStorage.remove('/authentication/userId');
+			smwSessionStorage.remove('/authentication/userRoles');
 		}
 
 		// public API
@@ -66,12 +80,11 @@ angular.module('smw')
 			 * @description
 			 * Set the login information.
 			 *
-			 * @param {string} _userId
+			 * @param {string} __userId
 			 * @param {Array|string} __roles
 			 */
-			login: function (_userId, __roles) {
-				_mUserId = _userId;
-				_mUserRoles = angular.isArray(__roles) ? __roles : __roles.split(',');
+			login: function (__userId, __roles) {
+				_login(__userId, __roles);
 			},
 
 			/**
@@ -81,8 +94,7 @@ angular.module('smw')
 			 * Reset the logged in user.
 			 */
 			logout: function () {
-				_mUserId = -1;
-				_mUserRoles = null;
+				_logout();
 			}
 		};
 	}
