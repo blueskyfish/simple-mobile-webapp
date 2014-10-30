@@ -21,6 +21,14 @@ angular.module('smw')
 					needLogin: false
 				}
 			})
+			.when('/logout', {
+				templateUrl: 'views/logout.html',
+				controller: 'SMW_LogoutController',
+				access: {
+					needLogin: true,
+					role: 'user'
+				}
+			})
 			.when('/signup', {
 				templateUrl: 'views/signup.html',
 				controller: 'SMW_SignupController',

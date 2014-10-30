@@ -1,10 +1,10 @@
 <div class="smw-page">
 	<header class="bar bar-nav">
-		<a class="btn pull-right" href="#homeSidebar"><i class="fa fa-bars"></i></a>
+		<button class="btn pull-left" ng-click="showSidebar()"><i class="fa fa-bars"></i></button>
 		<h1 class="title">{{ 'HOME_TITLE' | translate }}</h1>
 	</header>
 	<div class="content"></div>
-	<div class="popover" id="homeSidebar">
+	<sidebar sidebar-id="homeSidebar" position="left">
 		<header class="bar bar-nav">
 			<h1 class="title">{{ 'SIDEBAR_HOME' | translate }}</h1>
 		</header>
@@ -12,6 +12,15 @@
 			<li class="table-view-cell">
 				<a href="#/logout"><i class="fa fa-sign-out"> {{ 'CMD_LOGOUT' | translate }}</i></a>
 			</li>
+			<li class="table-view-cell">
+				<a href="#/logout"><i class="fa fa-sign-out"> {{ 'CMD_LOGOUT' | translate }}</i></a>
+			</li>
+			<li class="table-view-cell">
+				<a href="#/logout"><i class="fa fa-sign-out"> {{ 'CMD_LOGOUT' | translate }}</i></a>
+			</li>
+			<li class="table-view-cell">
+				<a href="#/logout"><i class="fa fa-sign-out"> {{ 'CMD_LOGOUT' | translate }}</i></a>
+			</li>
 		</ul>
-	</div>
+	</sidebar>
 </div>
