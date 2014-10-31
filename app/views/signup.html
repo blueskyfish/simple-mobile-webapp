@@ -16,10 +16,7 @@
 			<input-text type="email" label="LABEL_EMAIL" placeholder="PLACEHOLDER_EMAIL" model="user.email"></input-text>
 			<input-text type="password" label="LABEL_PASSWORD" placeholder="PLACEHOLDER_PASSWORD" model="user.password"></input-text>
 			<input-text type="password" label="LABEL_REPEAT" placeholder="PLACEHOLDER_REPEAT" model="user.repeat"></input-text>
-			<div class="input-row smw-input-check">
-				<label><div class="toggle" ng-click="checkAGB()"><div class="toggle-handle"></div></div></label>
-				<p><a ng-href="#/agb">{{ 'MSG_SIGNUP_AGB' | translate }}</a></p>
-			</div>
+			<input-check type="checkbox" label="MSG_SIGNUP_AGB" model="user.agb" icon-off="fa-square-o" icon-on="fa-check-square-o"></input-check>
 		</form>
 		<div class="content-padded">
 			<button class="btn btn-positive btn-block" ng-click="signupUser()">{{ 'CMD_SIGNUP' | translate }}</button>
