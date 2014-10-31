@@ -7,10 +7,10 @@ angular.module('smw')
 				replace: true,
 				template: '<div class="input-row"><label>{{ label | translate }}</label><input type="{{ type }}" placeholder="{{ placeholder | translate }}" ng-model="model"></div>',
 				scope: {
-					label: '=',
-					placeholder: '=',
+					label: '@',
+					placeholder: '@',
 					model: '=',
-					type: '='
+					type: '@'
 				}
 			};
 		}
