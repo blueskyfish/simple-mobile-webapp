@@ -11,20 +11,24 @@
 	background-color: white; // TODO color
 	-webkit-box-shadow: 0 0 15px rgba(0, 0, 0, .5);
 	        box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+	-webkit-transition: width 2s, opacity 1s;
+	-moz-transition   : width 2s, opacity 1s;
+	transition        : width 2s, opacity 1s;
 
 	&.right {
 		right: 0;
-		-webkit-border-top-left-radius: 6px;
-		border-top-left-radius: 6px;
+		.borderTopLeft(6px);
 	}
 	&.left {
 		left: 0;
-		-webkit-border-top-right-radius: 6px;
-		border-top-right-radius: 6px;
+		.borderTopRight(6px);
 	}
 	&.visible {
 		width: 65%;
 		opacity: 1;
+		-webkit-transition: width 2s, opacity 1s;
+		   -moz-transition: width 2s, opacity 1s;
+		        transition: width 2s, opacity 1s;
 	}
 
 	.bar {

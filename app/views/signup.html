@@ -12,22 +12,10 @@
 			{{ message }}
 		</p>
 		<form class="input-group" name="signupForm">
-			<div class="input-row">
-				<label>{{ 'LABEL_NAME' | translate }}</label>
-				<input type="text" placeholder="{{ 'PLACEHOLDER_NAME' | translate }}" ng-model="user.user">
-			</div>
-			<div class="input-row">
-				<label>{{ 'LABEL_EMAIL' | translate }}</label>
-				<input type="email" placeholder="{{ 'PLACEHOLDER_EMAIL' | translate }}" ng-model="user.email">
-			</div>
-			<div class="input-row">
-				<label>{{ 'LABEL_PASSWORD' | translate }}</label>
-				<input type="password" placeholder="{{ 'PLACEHOLDER_PASSWORD' | translate }}" ng-model="user.password">
-			</div>
-			<div class="input-row">
-				<label>{{ 'LABEL_REPEAT' | translate }}</label>
-				<input type="password" placeholder="{{ 'PLACEHOLDER_REPEAT' | translate }}" ng-model="user.repeat">
-			</div>
+			<input-text type="'text'" label="'LABEL_NAME'" placeholder="'PLACEHOLDER_NAME'" model="user.user"></input-text>
+			<input-text type="'email'" label="'LABEL_EMAIL'" placeholder="'PLACEHOLDER_EMAIL'" model="user.email"></input-text>
+			<input-text type="'password'" label="'LABEL_PASSWORD'" placeholder="'PLACEHOLDER_PASSWORD'" model="user.password"></input-text>
+			<input-text type="'password'" label="'LABEL_REPEAT'" placeholder="'PLACEHOLDER_REPEAT'" model="user.repeat"></input-text>
 			<div class="input-row smw-input-check">
 				<label><div class="toggle" ng-click="checkAGB()"><div class="toggle-handle"></div></div></label>
 				<p><a ng-href="#/agb">{{ 'MSG_SIGNUP_AGB' | translate }}</a></p>

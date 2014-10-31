@@ -12,14 +12,8 @@
 			{{ message }}
 		</p>
 		<form class="input-group" name="loginForm">
-			<div class="input-row">
-				<label>{{ 'LABEL_EMAIL' | translate }}</label>
-				<input type="email" placeholder="{{ 'PLACEHOLDER_EMAIL' | translate }}" ng-model="user.email">
-			</div>
-			<div class="input-row">
-				<label>{{ 'LABEL_PASSWORD' | translate }}</label>
-				<input type="password" placeholder="{{ 'PLACEHOLDER_PASSWORD' | translate }}" ng-model="user.password">
-			</div>
+			<input-text label="'LABEL_EMAIL'" type="'text'" placeholder="'PLACEHOLDER_EMAIL'" model="user.email"></input-text>
+			<input-text label="'LABEL_PASSWORD'" type="'password'" placeholder="'PLACEHOLDER_PASSWORD'" model="user.password"></input-text>
 		</form>
 		<div class="content-padded">
 			<button class="btn btn-positive btn-block" ng-click="loginUser()">{{ 'CMD_LOGIN' | translate }}</button>
