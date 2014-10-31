@@ -97,8 +97,7 @@ module.exports = function (grunt) {
 						'bower_components/angular-route/angular-route.min.js',
 						'bower_components/angular-touch/angular-touch.min.js',
 						'bower_components/angular-translate/angular-translate.min.js',
-						'bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js',
-						'bower_components/ratchet/dist/js/ratchet.min.js'
+						'bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js'
 					],
 					'.tmp/assets/js/application.js': [
 						'app/assets/js/app.js',
