@@ -1,9 +1,8 @@
 {
 	"name": "simple-mobile-webapp",
 	"version": "0.0.1",
-	"author": "Mulder3 <Mulder3@kirchnerei.de>",
+	"author": "BlueSkyFish <blueskyfish@kirchnerei.de>",
 	"keywords": ["webapp", "mobile", "html5", "css"],
-	"homepage": "http://www.example.com/path/to/info.html",
 	"license": "MIT",
 	"description": "This is a simple mobile web application with Ratchet, Angular and Angular Translate.",
 	"dependencies": {
@@ -22,7 +21,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://"
+		"url": "https://github.com/blueskyfish/simple-mobile-webapp.git"
 	},
 	"private": true
 }
